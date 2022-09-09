@@ -1,0 +1,61 @@
+# trimming duplicate value from a dictionary
+
+dictionary = [
+        {"email": "anusree@gmail.com", "password": "anusree", "name": "None"},
+        {"email": "anusree@gmail.com", "password": "anusree", "name": None},
+        {"email": "tcs@gmail.com", "password": "anunima123", "name": "Arunima"},
+        {"email": "gopika@gmail.com", "password": "1234f", "name": "Gopika"},
+        {"email": "arya@gmail.com", "password": "arya%ytsdasd", "name": None},
+        {"email": "dora@gmail.com", "password": "dora", "name": "Dora"},
+    ]
+
+
+output :-
+[
+    {"email": "anusree@gmail.com", "password": "anusree", "name": "None"},
+    {"email": "tcs@gmail.com", "password": "anunima123", "name": "Arunima"},
+    {"email": "gopika@gmail.com", "password": "1234f", "name": "Gopika"},
+    {"email": "arya@gmail.com", "password": "arya%ytsdasd", "name": None},
+    {"email": "dora@gmail.com", "password": "dora", "name": "Dora"},
+]
+
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+case - 1:-
+seen = set()
+trimmed_already_exist_emails = []
+for d in already_exist_emails:
+    t = tuple(d.items())
+    if t not in seen:
+        seen.add(t)
+        trimmed_already_exist_emails.append(d)
+
+case - 2:-
+trimmed_already_exist_emails = []
+for i in range(len(already_exist_emails)):
+    if already_exist_emails[i] not in already_exist_emails[i+1:]:
+        trimmed_already_exist_emails.append(already_exist_emails[i])
+
+case - 3-
+import binascii
+checkCRCs = []
+final_sensor_data = []
+dupKeys = ["email", "password", "name"]
+if dupKeys == []:
+    for sensor_read in already_exist_emails:
+        ck1 = binascii.crc32(str(sensor_read).encode('utf8'))
+        if not ck1 in checkCRCs:
+            final_sensor_data.append(sensor_read)
+            checkCRCs.append(ck1)
+else:
+    for sensor_read in already_exist_emails:
+        tmp = ""
+        for k in dupKeys:
+            tmp += str(sensor_read[k])
+
+        ck1 = binascii.crc32(tmp.encode('utf8'))
+        if not ck1 in checkCRCs:
+            final_sensor_data.append(sensor_read)
+            checkCRCs.append(ck1)

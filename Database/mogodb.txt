@@ -1,0 +1,16 @@
+# Mongodb
+DATABASES = {
+    'default': {
+        'ENGINE': 'djongo',
+        'NAME': 'database_name',
+    }
+}
+
+
+
+# requirements:-
+    pip install pymongo==3.12.0
+
+
+# PostgreSQL engine:-
+    MongoDB Compass- https://www.mongodb.com/try/download/compass

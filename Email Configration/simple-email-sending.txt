@@ -1,0 +1,9 @@
+from django.core.mail import send_mail
+
+subject = 'Verification code'
+message = f'Hi {username},\n Here is your verification code {otp} to validate your account.'
+email_from = settings.EMAIL_HOST_USER
+recipient_list = [email]
+send_mail(subject, message, email_from, recipient_list)
+print('email send successfully')
+

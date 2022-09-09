@@ -1,0 +1,20 @@
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'database_name',
+        'USER': 'root',
+        'PASSWORD': '',
+        'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
+        'PORT': '3306',
+    }
+}
+
+
+# requirements:-
+    pip install mysqlclient
+
+
+# Mysql engine:-
+    1. Wampserver - https://www.wampserver.com/en/
+    2. xampp - https://www.apachefriends.org/

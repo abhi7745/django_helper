@@ -1,0 +1,3 @@
+with open('static/Email_Already_Exist.txt', 'w+') as emails:
+    emails = ['xyz@gmail.com','abcd@gmail.com']
+    print('file created and rewrited')

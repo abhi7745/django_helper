@@ -1,0 +1,19 @@
+
+For Outlook(Microsoft Mail)
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.outlook.com' #outlook mail
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'your_email_id@outlook.com'
+EMAIL_HOST_PASSWORD = 'your_email_password'
+
+
+For Google(Gmail Mail)
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com' # gmail
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'your_email_id@gmail.com'
+EMAIL_HOST_PASSWORD = 'your_email_password'

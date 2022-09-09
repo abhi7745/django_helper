@@ -1,0 +1,29 @@
+from django.contrib import messages
+
+messages.add_message(request, messages.INFO, 'Hello world.')
+messages.debug(request, '%s SQL statements were executed.' % count)
+messages.info(request, 'Three credits remain in your account.')
+messages.warning(request, 'Your account expires in three days.')
+messages.error(request, 'Document deleted.')
+
+messages.success(request, 'Profile details updated.')
+messages.error(request, 'Email box full', extra_tags='email_msg')
+
+
+
+-html :-
+--------------------------------------------------------------------------
+case - 1
+{% if messages %}
+    {% for message in messages %}
+        {{ message }}
+    {% endfor %}
+{% endif %}
+--------------------------------------------------------------------------
+case - 2
+{% for message in messages  %}
+    {% if message.tags == 'content_required success' %}
+        {{message}}
+    {% endif %}
+{% endfor %}
+--------------------------------------------------------------------------

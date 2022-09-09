@@ -1,0 +1,29 @@
+INSTALLED_APPS = [
+    'ckeditor'
+]
+
+
+# requirements:-
+    pip install django-ckeditor
+
+
+# ckeditor custom styles
+
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'Custom',
+        # 'height': 900,
+        'width': 877,
+        'skin': 'moono',
+        'toolbar_Custom': [
+            ['Format','Styles', 'Font', 'FontSize'],
+            ['Undo', 'Redo','Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript'],
+            ['Link', 'Unlink','RemoveFormat'],
+            ['Table', 'HorizontalRule', 'Smiley', 'SpecialChar', 'PageBreak', 'Iframe'],
+            ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Blockquote', 'CreateDiv', '-','JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock',
+            '-', 'BidiLtr', 'BidiRtl'],
+            ['TextColor', 'BGColor','Find','-', 'Replace', 'SelectAll'],
+            ['Maximize','Preview']
+        ],
+    }
+}

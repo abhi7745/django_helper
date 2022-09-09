@@ -1,0 +1,19 @@
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'database_name',
+        'USER': 'postgres',
+        'PASSWORD':'1234',
+        'HOST': 'localhost', # Or an IP Address that your DB is hosted on
+    }
+}
+
+
+
+# requirements:-
+    pip install psycopg2
+
+
+# PostgreSQL engine:-
+    pgAdmin - https://www.pgadmin.org/download/

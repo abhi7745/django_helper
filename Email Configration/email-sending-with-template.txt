@@ -1,0 +1,18 @@
+# email sending purpose
+from django.template.loader import render_to_string
+from django.core.mail import EmailMessage
+from django.conf import settings
+
+
+# email sending area
+
+mydict={'username':username,'otp':otp}
+html_template = 'email_templates/forgot_psd_email_sender.html'
+html_message = render_to_string(html_template, context=mydict)
+subject = 'Password Reset Verification Code'
+email_from = settings.EMAIL_HOST_USER
+recipient_list = [email]
+message = EmailMessage(subject, html_message, email_from, recipient_list)
+message.content_subtype = 'html'
+message.send()
+print('email send successfully')
