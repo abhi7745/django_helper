@@ -3,4 +3,4 @@
 ## Contents:-
 
 Ck-editor, Database Configurations, Email Configration, Custom decorator, dictionary_duplicate_remover,
-file_operations, Messages,
+file_operations, Messages, | Django(ORM)
