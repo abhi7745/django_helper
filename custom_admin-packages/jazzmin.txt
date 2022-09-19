@@ -1,0 +1,10 @@
+pip install django-jazzmin
+
+INSTALLED_APPS = [
+    'jazzmin',
+
+    'django.contrib.admin',
+    ...
+]
+
+documentation : https://django-jazzmin.readthedocs.io/
