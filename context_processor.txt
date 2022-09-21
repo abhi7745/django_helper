@@ -1,0 +1,33 @@
+- Pass data to any template without django views.py
+- Global model(database) data for every template
+
+1. Create a context_processor.py file in app folder
+2. Import model & return it in the form of dictionary via a function
+3. Mention this function path in the settings.py file
+4. Use this database or model data in any templates
+
+
+context_processor.py:-
+    from accounts.models import User_Account
+
+    def global_dict(request):
+        mydata = User_Account.objects.all()
+        return {'mydata': mydata}
+
+
+settings.py:
+
+    TEMPLATES = [
+    {
+        ...
+
+        'OPTIONS': {
+            'context_processors': [
+                ...
+                
+                #app.file_name.function_name
+                'accounts.context_processor.global_dict', # custom context_processor
+            ],
+        },
+    },
+]
