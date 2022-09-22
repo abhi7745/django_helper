@@ -1,0 +1,15 @@
+Only work on DEBUG = False , ALLOWED_HOSTS = ['*']
+
+1. Settings.py :-
+    DEBUG = False
+    ALLOWED_HOSTS = ['*'] or ALLOWED_HOSTS = ['https://xyz.com']
+
+2. urls.py :-
+    handler404 = 'accounts.views.error_404'
+
+
+3. Views.py :-
+    def error_404(request, exception):
+        return render(request, '404.html')
+
+4. create a 404.html page
