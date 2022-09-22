@@ -1,0 +1,15 @@
+Only work on DEBUG = False , ALLOWED_HOSTS = ['*']
+
+1. Settings.py :-
+    DEBUG = False
+    ALLOWED_HOSTS = ['*'] or ALLOWED_HOSTS = ['https://xyz.com']
+
+2. urls.py :-
+    handler500 = 'accounts.views.error_500'
+
+
+3. Views.py :-
+    def error_500(request):
+        return render(request, '500.html')
+
+4. create a 500.html page

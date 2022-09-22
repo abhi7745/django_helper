@@ -4,4 +4,4 @@
 
 Ck-editor, Database Configurations, Email Configration, Custom decorator, dictionary_duplicate_remover,
 file_operations, Messages, | Django(ORM) | environ | custom_admin-packages |
-context_processor |
+context_processor | 404_error.txt | 500_error.txt
