@@ -1,3 +1,9 @@
+method-1 :-
+output = open('data.txt', 'w')
+output.write('Writing data..')
+
+
+method-2 :-
 with open('static/Email_Already_Exist.txt', 'w+') as emails:
     emails = ['xyz@gmail.com','abcd@gmail.com']
     print('file created and rewrited')
