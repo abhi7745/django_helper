@@ -1,0 +1,16 @@
+1. models.py :-
+
+from django.contrib.auth.models import AbstractUser
+class User(AbstractUser):
+    role=models.CharField(max_length=50,null=True,blank=True)
+
+
+2. settings.py :-
+
+AUTH_USER_MODEL = 'appname.User'
+
+
+3. admin.py :-
+
+from appname.models import CustomUser
+admin.site.register(CustomUser)
