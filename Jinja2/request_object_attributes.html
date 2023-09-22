@@ -1,0 +1,66 @@
+{{ request.scheme }} <br><br>
+{{ request.path }} <br><br>
+{{request.get_host}} <br><br>
+{{ request.META.HTTP_HOST }} <br><br>
+{{ request.build_absolute_uri }} <br><br>
+{{ request.method }}<br><br>
+{{ request.META.USERNAME }}<br><br>
+{{ request.META.HTTP_USER_AGENT }}<br><br>
+{{ request.META.COMPUTERNAME}}<br><br>
+{{ request.META.COMSPEC}}<br><br>
+{{ request.META.ENV_PROMPT}}<br><br>
+{{ request.META.FPS_BROWSER_APP_PROFILE_STRING}}<br><br>
+{{ request.META.FPS_BROWSER_USER_PROFILE_STRING}}<br><br>
+{{ request.META.HOMEDRIVE}}<br><br>
+{{ request.META.HOMEPATH}}<br><br>
+{{ request.META.NUMBER_OF_PROCESSORS}}<br><br>
+{{ request.META.OS}}<br><br>
+{{ request.META.PATH}}<br><br>
+{{ request.META.PROCESSOR_ARCHITECTURE}}<br><br>
+{{ request.META.PROCESSOR_IDENTIFIER}}<br><br>
+{{ request.META.SYSTEMDRIVE }}<br><br>
+{{ request.META.SYSTEMROOT }}<br><br>
+{{ request.META.USERDOMAIN }}<br><br>
+{{ request.META.USERDOMAIN_ROAMINGPROFILE }}<br><br>
+{{ request.META.USERPROFILE }}<br><br>
+{{ request.META.VIRTUAL_ENV }}<br><br>
+{{ request.META.TERM_PROGRAM}}<br><br>
+{{ request.META.TERM_PROGRAM_VERSION}}<br><br>
+{{ request.META.DJANGO_SETTINGS_MODULE }}<br><br>
+{{ request.META.RUN_MAIN }}<br><br>
+{{ request.META.SERVER_NAME }}<br><br>
+{{ request.META.SERVER_PORT }}<br><br>
+{{ request.META.REMOTE_HOST }}<br><br>
+{{ request.META.SERVER_PROTOCOL }}<br><br>
+{{ request.META.SERVER_SOFTWARE }}<br><br>
+{{ request.META.REQUEST_METHOD }}<br><br>
+{{ request.META.PATH_INFO }}<br><br>
+{{ request.META.REMOTE_ADDR }}<br><br>
+{{ request.META.CONTENT_TYPE }}<br><br>
+{{ request.META.HTTP_CONNECTION }}<br><br>
+{{ request.META.HTTP_CACHE_CONTROL }}<br><br>
+{{ request.META.HTTP_SEC_CH_UA }}<br><br>
+{{ request.META.HTTP_SEC_CH_UA_MOBILE }}<br><br>
+{{ request.META.HTTP_SEC_CH_UA_PLATFORM }}<br><br>
+{{ request.META.HTTP_UPGRADE_INSECURE_REQUESTS }} ->HTTP_UPGRADE_INSECURE_REQUESTS<br><br>
+{{ request.META.HTTP_COOKIE }}<br><br>
+{{ request.META.CSRF_COOKIE }}<br><br>
+{{ request.META.CSRF_COOKIE_NEEDS_UPDATE }}<br><br>
+{{ request.session }}<br><br>
+{{ request.COOKIES }}<br><br>
+{{ request.FILES}}<br><br>
+{{ request.path_info }}<br><br>
+{{ request.resolver_match.url_name }}<br><br>
+{{ request.resolver_match.view_name }}<br><br>
+{{ request.resolver_match.kwargs }}<br><br>
+{{ request.resolver_match.route }}<br><br>
+{{ request.resolver_match.captured_kwargs }}<br><br>
+{{ request.is_secure }}<br><br>
+{{ request.get_full_path }}<br><br>
+{{ request.get_port }}<br><br>
+{{ request.headers }}<br><br>
+<hr>                    
+
+{% comment %} {% for data in request.META  %}
+    {{data}} <br><br>
+{% endfor %} {% endcomment %}
